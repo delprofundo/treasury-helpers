@@ -1,4 +1,4 @@
-const crypto = require( 'crypto-js' );
+const crypto = require( 'crypto' );
 
 const INSTRUMENT_TYPES = {
   CREDITCARD: 'CREDITCARD',
@@ -43,6 +43,7 @@ module.exports.maskIdentifier = function( identifier, maskScheme ) {
 /**
  * encrypt any string. presently uses a string passed in from SSM
  * @param clearText
+ * @param encKey
  * @returns {*}
  */
 module.exports.encryptString = function( clearText, encKey ) {
