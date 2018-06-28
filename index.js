@@ -67,3 +67,4 @@ module.exports.isBsb = function( candidateBsb ) {
 module.exports.isNumberString = function( candidateString ) {
   return numString.test( candidateString )
 }; // end isNumberString
+

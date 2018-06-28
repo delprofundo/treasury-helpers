@@ -10,6 +10,11 @@
     "treasury",
     "instruments"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:delprofundo/treasury-helpers.git"
+  },
+  "homepage": "https://github.com/delprofundo/treasury-helpers",
   "author": "delProfundo",
   "license": "Apache-2.0",
   "dependencies": {
