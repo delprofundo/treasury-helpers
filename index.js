@@ -34,7 +34,7 @@ let bsbString = new RegExp(/^\d{3}-?\d{3}$/);
  * @param maskScheme
  * @returns {string}
  */
-export function maskIdentifier( identifier, maskScheme ) {
+module.exports.maskIdentifier = function( identifier, maskScheme ) {
   let stars = '*'.repeat( identifier.length - CC_MASK_SCHEMES[maskScheme].TOTAL_MASKED );
   let maskedIdentifier = identifier.substring( 0, CC_MASK_SCHEMES[maskScheme].START ) + stars;
   return maskedIdentifier + identifier.substring(identifier.length - CC_MASK_SCHEMES[maskScheme].END);
@@ -45,7 +45,7 @@ export function maskIdentifier( identifier, maskScheme ) {
  * @param clearText
  * @returns {*}
  */
-export function encryptString( clearText, encKey ) {
+module.exports.encryptString = function( clearText, encKey ) {
   return crypto.AES.encrypt( clearText, encKey ).toString();
 } // end encryptString
 
@@ -54,7 +54,7 @@ export function encryptString( clearText, encKey ) {
  * @param candidateBsb
  * @returns {boolean}
  */
-export function isBsb( candidateBsb ) {
+module.exports.isBsb = function( candidateBsb ) {
   return bsbString.test( candidateBsb )
 }
 
@@ -63,6 +63,6 @@ export function isBsb( candidateBsb ) {
  * @param candidateString
  * @returns {boolean}
  */
-export function isNumberString( candidateString ) {
+module.exports.isNumberString = function( candidateString ) {
   return numString.test( candidateString )
 }
