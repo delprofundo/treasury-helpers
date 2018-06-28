@@ -1,4 +1,4 @@
-const crypto = require( 'crypto' );
+const crypto = require( 'crypto-js' );
 
 const INSTRUMENT_TYPES = {
   CREDITCARD: 'CREDITCARD',
@@ -38,7 +38,7 @@ module.exports.maskIdentifier = function( identifier, maskScheme ) {
   let stars = '*'.repeat( identifier.length - CC_MASK_SCHEMES[maskScheme].TOTAL_MASKED );
   let maskedIdentifier = identifier.substring( 0, CC_MASK_SCHEMES[maskScheme].START ) + stars;
   return maskedIdentifier + identifier.substring(identifier.length - CC_MASK_SCHEMES[maskScheme].END);
-} // end maskIdentifier
+}; // end maskIdentifier
 
 /**
  * encrypt any string. presently uses a string passed in from SSM
@@ -48,7 +48,7 @@ module.exports.maskIdentifier = function( identifier, maskScheme ) {
  */
 module.exports.encryptString = function( clearText, encKey ) {
   return crypto.AES.encrypt( clearText, encKey ).toString();
-} // end encryptString
+}; // end encryptString
 
 /**
  * boolean test that the number could be a BSB
@@ -57,7 +57,7 @@ module.exports.encryptString = function( clearText, encKey ) {
  */
 module.exports.isBsb = function( candidateBsb ) {
   return bsbString.test( candidateBsb )
-}
+}; // end isBsb
 
 /**
  * Boolean test that a string is in fact a regular number
@@ -66,4 +66,4 @@ module.exports.isBsb = function( candidateBsb ) {
  */
 module.exports.isNumberString = function( candidateString ) {
   return numString.test( candidateString )
-}
+}; // end isNumberString
