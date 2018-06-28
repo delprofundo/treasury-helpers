@@ -1,0 +1,15 @@
+{
+  "name": "treasury-helpers",
+  "version": "1.0.0",
+  "description": "a set of functions that help work with financial instruments and processes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "treasury",
+    "instruments"
+  ],
+  "author": "delProfundo",
+  "license": "Apache-2.0"
+}
