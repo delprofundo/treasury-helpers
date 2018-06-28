@@ -1,6 +1,6 @@
 {
   "name": "treasury-helpers",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "a set of functions that help work with financial instruments and processes",
   "main": "index.js",
   "scripts": {
