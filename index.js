@@ -51,7 +51,7 @@ module.exports.encryptString = function( clearText, encKey ) {
 }; // end encryptString
 
 /**
- * decrypt a string using the service key
+ * decrypt a string using the provided
  * @param cypherText
  * @param encKey
  * @returns {*}
