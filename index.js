@@ -56,7 +56,7 @@ module.exports.encryptString = function( clearText, encKey ) {
  * @param encKey
  * @returns {*}
  */
-const decryptString = function( cypherText, encKey ) {
+module.exports.decryptString = function( cypherText, encKey ) {
   return crypto.AES.decrypt(cypherText.toString(), encKey ).toString( crypto.enc.Utf8 );
 }; // end decryptString
 
