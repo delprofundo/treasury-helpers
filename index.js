@@ -51,6 +51,16 @@ module.exports.encryptString = function( clearText, encKey ) {
 }; // end encryptString
 
 /**
+ * decrypt a string using the service key
+ * @param cypherText
+ * @param encKey
+ * @returns {*}
+ */
+const decryptString = function( cypherText, encKey ) {
+  return crypto.AES.decrypt(cypherText.toString(), encKey ).toString( crypto.enc.Utf8 );
+}; // end decryptString
+
+/**
  * boolean test that the number could be a BSB
  * @param candidateBsb
  * @returns {boolean}
