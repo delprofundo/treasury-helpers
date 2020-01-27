@@ -34,7 +34,7 @@ let bsbString = new RegExp(/^\d{3}-?\d{3}$/);
  * @param maskScheme
  * @returns {string}
  */
-module.exports.maskIdentifier = function( identifier, maskScheme = CC_MASK_SCHEMES.FOUR_THREE ) {
+module.exports.maskIdentifier = function( identifier, maskScheme = "FOUR_THREE" ) {
   let stars = '*'.repeat( identifier.length - CC_MASK_SCHEMES[maskScheme].TOTAL_MASKED );
   let maskedIdentifier = identifier.substring( 0, CC_MASK_SCHEMES[maskScheme].START ) + stars;
   return maskedIdentifier + identifier.substring(identifier.length - CC_MASK_SCHEMES[maskScheme].END);
